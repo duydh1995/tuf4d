@@ -1,0 +1,36 @@
+{
+   "manifest_version": 2,
+   "name": "tuf4d",
+   "description": "tuf4d",
+   "version": "0.0.1",
+
+   "browser_action": {
+      "default_icon": "./imgs/icons/128.png",
+      "default_title": "tuf4d"
+   },
+
+   "icons": {
+      "16": "./imgs/icons/16.png",
+      "48": "./imgs/icons/48.png",
+      "128": "./imgs/icons/128.png"
+   },
+
+   "background": {
+      "scripts": [ "./js/background.js" ]
+   },
+
+   "content_scripts": [
+      {
+         "matches": [ "*://dictionary.cambridge.org/*" ],
+         "js": [ "./js/content.js", "./js/jquery-3.2.1.min.js" ]
+      }
+   ],
+
+   "permissions": [
+      "activeTab",
+      "contextMenus",
+      "clipboardRead",
+      "clipboardWrite",
+      "debugger"
+   ]
+}
