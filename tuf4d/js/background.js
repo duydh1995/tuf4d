@@ -20,5 +20,10 @@ function onClick(info, tab) {
          message = "cambridge_get_mp3_url";
 
       chrome.tabs.sendMessage(tab.id, message);
+   } else if (url.match("^http://tiengnhat24h.com/")) {
+      var
+         message = "jgv";
+
+      chrome.tabs.sendMessage(tab.id, message);
    }
 }

@@ -21,7 +21,10 @@
 
    "content_scripts": [
       {
-         "matches": [ "*://dictionary.cambridge.org/*" ],
+         "matches": [
+            "*://dictionary.cambridge.org/*",
+            "*://tiengnhat24h.com/*"
+         ],
          "js": [ "./js/content.js", "./js/jquery-3.2.1.min.js" ]
       }
    ],
